@@ -1,52 +1,58 @@
 {
-  "compilerOptions": {
-    "esModuleInterop": true,
-    "baseUrl": "src",
-    "incremental": true,
-    "jsx": "preserve",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "outDir": "dist",
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
+    "compilerOptions": {
+        "esModuleInterop": true,
+        "baseUrl": "src",
+        "incremental": true,
+        "jsx": "preserve",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "outDir": "dist",
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ],
+        "paths": {
+            "@/*": [
+                "./*"
+            ],
+            "@/lib/*": [
+                "./app/lib/*"
+            ],
+            "@/components/*": [
+                "./app/components/*"
+            ]
+        },
+        "rootDirs": [
+            "src"
+        ],
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "esnext"
+        ],
+        "strict": true,
+        "sourceMap": true,
+        "skipLibCheck": true,
+        "target": "ES2022",
+        "noImplicitOverride": true,
+        "removeComments": true,
+        "emitDecoratorMetadata": true,
+        "forceConsistentCasingInFileNames": true,
+        "experimentalDecorators": true,
+        "allowJs": true,
+        "noEmit": true
     },
-    "rootDirs": [
-      "src"
+    "exclude": [
+        "node_modules"
     ],
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "strict": true,
-    "sourceMap": true,
-    "skipLibCheck": true,
-    "target": "ES2022",
-    "noImplicitOverride": true,
-    "removeComments": true,
-    "emitDecoratorMetadata": true,
-    "forceConsistentCasingInFileNames": true,
-    "experimentalDecorators": true,
-    "allowJs": true,
-    "noEmit": true
-  },
-  "exclude": [
-    "node_modules"
-  ],
-  "include": [
-    "src",
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ]
+    "include": [
+        "src",
+        "next-env.d.ts",
+        "**/*.ts",
+        "**/*.tsx",
+        ".next/types/**/*.ts"
+    ]
 }
